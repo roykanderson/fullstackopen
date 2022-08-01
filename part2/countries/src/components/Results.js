@@ -6,7 +6,8 @@ const Results = ({ search, countries, setSearch }) => {
   // Filter countries by search
   const results = countries
     .filter(country => 
-      country.name.toLowerCase().includes(search.toLowerCase())
+      country.name.common.toLowerCase()
+        .includes(search.toLowerCase())
     )
 
   // Search is empty
